@@ -1,0 +1,84 @@
+.app .dash-panel.dashboard-admin { gap: 10px; grid-template-rows: none; align-content: start; }
+.app .dashboard-admin .dash-welcome { flex-wrap: wrap; justify-content: space-between; padding-block: 10px; }
+.app .dashboard-admin .dash-welcome button { flex: none; }
+.dashboard-admin .dash-card h2 { margin: 0; font-size: 1.12em; }
+.dashboard-admin .dash-card-heading a { color: var(--ui-accent-text); font-size: .85em; }
+.dashboard-admin-listas { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.dashboard-admin .dash-list { font-size: .98em; }
+.dashboard-admin .dashboard-admin-movimientos li { display: block; padding: 0; }
+.app .dashboard-admin-movimientos button {
+  display: grid;
+  width: 100%;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 8px;
+  align-items: center;
+  min-height: 38px;
+  padding: 4px 6px;
+  text-align: start;
+  border-color: transparent;
+  background: transparent;
+  color: var(--ui-ink);
+}
+.dashboard-admin-movimientos .nav-icon { color: var(--ui-accent-text); }
+.dashboard-admin-movimientos time { color: var(--ui-muted); font-size: .85em; white-space: nowrap; }
+.dashboard-admin .dashboard-admin-actividad { padding-block: 13px; }
+.dashboard-admin .indicadores-actividad > div { padding: 9px 12px; }
+.dashboard-admin .indicadores-actividad dd { font-size: calc(1.65rem * var(--ui-text-scale, 1)); }
+.dashboard-admin .indicadores-actividad .metric-heading { flex-direction: row; align-items: center; }
+@media (min-width: 1000px) {
+  .app .dashboard-admin .indicadores { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 720px) {
+  .dashboard-admin-listas { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (min-width: 1051px) {
+  .app .main:has(> .content > .dashboard-admin) { min-block-size: 100dvh; }
+  .app .content.content--dashboard:has(> .dashboard-admin) { padding-block: clamp(9px, 1.25dvh, 16px) clamp(20px, 3.1dvh, 42px); }
+  .app .dash-panel.dashboard-admin {
+    align-content: stretch;
+    gap: clamp(8px, .98dvh, 14px);
+    grid-template-rows: auto auto minmax(min-content, 1.4fr) minmax(min-content, .8fr);
+  }
+  .app .dash-panel.dashboard-admin .dash-welcome { padding-block: 13px; }
+  .app .dash-panel.dashboard-admin .indicadores-dashboard .stat-card {
+    min-block-size: clamp(108px, 15dvh, 130px);
+    padding: clamp(10px, 1.45dvh, 16px) clamp(14px, 1.45vw, 23px);
+  }
+  .app .dash-panel.dashboard-admin .indicadores-dashboard .metric-heading { font-size: 1.04em; }
+  .app .dash-panel.dashboard-admin .indicadores-dashboard .metric-icon { width: 40px; height: 40px; }
+  .app .dash-panel.dashboard-admin .indicadores-dashboard .stat-card strong {
+    font-size: calc(clamp(2.1rem, 3.15vw, 3.1rem) * var(--ui-text-scale, 1));
+  }
+  .app .dash-panel.dashboard-admin .indicadores-dashboard .indicador-texto strong {
+    font-size: calc(clamp(1.5rem, 2.25vw, 2.25rem) * var(--ui-text-scale, 1));
+  }
+  .dashboard-admin-listas .dash-card { padding: clamp(11px, 1.5dvh, 19px) clamp(14px, 1.45vw, 22px); }
+  .app .dashboard-admin .dashboard-admin-listas .dash-list:not(.dashboard-admin-movimientos) li {
+    padding-block: clamp(10px, 1.8dvh, 21px);
+  }
+  .app .dashboard-admin .dashboard-admin-movimientos button { min-height: clamp(43px, 5.35dvh, 63px); }
+  .dashboard-admin .dashboard-admin-actividad {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 7px;
+    padding-inline: clamp(14px, 1.45vw, 22px);
+  }
+  .dashboard-admin .indicadores-actividad { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .dashboard-admin .indicadores-actividad > div { min-block-size: 51px; }
+}
+@media (min-width: 1051px) and (min-height: 860px) {
+  .app .dash-panel.dashboard-admin .indicadores-dashboard .stat-card {
+    min-block-size: clamp(150px, 16.7dvh, 180px);
+  }
+}
+@media (min-width: 1051px) and (max-height: 859px) {
+  .app .content.content--dashboard:has(> .dashboard-admin) { padding-block-end: 20px; }
+  .app .dash-panel.dashboard-admin { gap: 8px; }
+  .app .dash-panel.dashboard-admin .dash-welcome { padding-block: 8px; }
+  .app .dash-panel.dashboard-admin .indicadores-dashboard .stat-card { min-block-size: 106px; padding-block: 9px; }
+  .dashboard-admin .dashboard-admin-actividad { padding-block: 9px; }
+  .dashboard-admin .indicadores-actividad > div { min-block-size: 0; padding-block: 5px; }
+  .app .dashboard-admin .dashboard-admin-movimientos button { min-height: 40px; }
+}

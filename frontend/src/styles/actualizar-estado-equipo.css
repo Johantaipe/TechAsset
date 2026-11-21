@@ -1,0 +1,38 @@
+.app td .inventario-ver-equipo { min-width: 44px; min-height: 44px; padding: 8px; }
+.app td .inventario-ver-equipo .nav-icon { width: 20px; height: 20px; flex: none; }
+
+.app .dialogo:has(> .detalle-equipo-tecnologia) {
+  width: min(760px, calc(100% - 30px));
+  max-width: none;
+}
+
+.detalle-equipo-tecnologia h3 {
+  margin: 0 0 1rem;
+  font-size: calc(1.5rem * var(--ui-text-scale, 1));
+  overflow-wrap: anywhere;
+}
+
+.detalle-equipo-tecnologia h4 { margin: 1.25rem 0 .75rem; }
+
+.detalle-equipo-tecnologia dl {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr));
+  gap: .75rem;
+  margin: 0;
+}
+
+.detalle-equipo-tecnologia dl > div {
+  border: 1px solid var(--ui-border);
+  border-radius: .75rem;
+  padding: .85rem;
+}
+
+.detalle-equipo-tecnologia dd { margin: .35rem 0 0; font-weight: 700; overflow-wrap: anywhere; }
+.detalle-equipo-estadisticas dd { font-size: calc(1.55rem * var(--ui-text-scale, 1)); }
+.detalle-equipo-tecnologia .acciones { justify-content: flex-end; flex-wrap: wrap; margin-top: 1.25rem; }
+
+.app .etiqueta.inventario-estado-baja {
+  background: var(--ui-rejected-bg);
+  color: var(--ui-rejected-ink);
+  border-color: var(--ui-rejected-ink);
+}

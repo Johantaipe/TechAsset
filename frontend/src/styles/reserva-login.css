@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap');
+
+.reserva-login { --rl-u:calc(100vw / 1671); --rl-ink:#001448; color:var(--rl-ink); background:#0879de; font-family:Inter,Arial,sans-serif; min-height:100svh; }
+.reserva-login svg { width:calc(var(--rl-u)*28); height:calc(var(--rl-u)*28); flex:0 0 auto; }
+.rl-saltar { position:absolute; top:8px; left:16px; transform:translateY(-160%); background:#fff; color:#082b60; padding:14px; z-index:8; border-radius:6px; }.rl-saltar:focus { transform:none; }
+.rl-hero { position:relative; isolation:isolate; min-height:100svh; overflow:visible; }
+.rl-fotografia { position:absolute; inset:0; z-index:-2; background-color:#0886ec; background-image:var(--login-photo); background-position:left calc(100% + var(--rl-u)*18); background-size:100% auto; background-repeat:no-repeat; }
+.rl-fotografia::after { content:''; position:absolute; inset:0; background:linear-gradient(0deg,#00418e15,transparent 25%); }
+.reserva-login .rl-onda-superior { position:absolute; z-index:-1; top:0; left:0; width:68%; height:31%; }
+.rl-cabecera-institucional { position:absolute; z-index:1; top:calc(var(--rl-u)*20); left:7.5%; width:48%; color:#fff; }
+.rl-institucion { display:flex; align-items:center; height:calc(var(--rl-u)*59); gap:calc(var(--rl-u)*14); }
+.rl-simbolo-institucion { width:calc(var(--rl-u)*44); height:calc(var(--rl-u)*65); flex:0 0 auto; background-image:var(--login-photo); background-repeat:no-repeat; background-size:calc(var(--rl-u)*813.6) calc(var(--rl-u)*391.5); background-position:calc(var(--rl-u)*-350) calc(var(--rl-u)*-77); filter:grayscale(1) contrast(20); mix-blend-mode:screen; }
+.rl-institucion > strong { color:#fff; font-family:Inter,Arial,sans-serif; font-size:calc(var(--rl-u)*50); letter-spacing:calc(var(--rl-u)*-1.5); line-height:1; font-weight:800; }
+.rl-universidad { border-left:calc(var(--rl-u)*2) solid #d1eaff; padding-left:calc(var(--rl-u)*17); margin-left:calc(var(--rl-u)*5); font-size:calc(var(--rl-u)*14); line-height:1.23; font-weight:600; }
+.rl-presentacion { margin-top:calc(var(--rl-u)*5); }.rl-producto { font-size:calc(var(--rl-u)*58); line-height:1.05; font-weight:800; letter-spacing:calc(var(--rl-u)*-1.9); margin:0; }.rl-producto span { color:#68c2f9; }
+.rl-subtitulo-institucional { margin:0 0 calc(var(--rl-u)*10); font-size:calc(var(--rl-u)*24); font-weight:650; line-height:1.2; }.rl-descripcion-institucional { margin:0; font-size:calc(var(--rl-u)*18); line-height:1.3; }
+.rl-acceso { position:absolute; z-index:2; top:12.85%; right:6.88%; width:36.3%; }
+.rl-panel { border:1px solid #fff; border-radius:calc(var(--rl-u)*33); background:linear-gradient(140deg,#fff,#f5f7ff); box-shadow:0 calc(var(--rl-u)*13) calc(var(--rl-u)*28) #00235b36; padding:calc(var(--rl-u)*37) calc(var(--rl-u)*42) calc(var(--rl-u)*39); }
+.rl-panel .rl-marca { width:100%; height:calc(var(--rl-u)*100); max-width:none; padding:0; margin:0 0 calc(var(--rl-u)*19); background:transparent; border-radius:0; }.rl-panel .rl-marca picture { height:100%; }.rl-panel .rl-marca img { width:100%; height:100%; object-fit:contain; }
+.rl-panel h1 { font-family:Inter,Arial,sans-serif; font-size:calc(var(--rl-u)*48); font-weight:800; letter-spacing:calc(var(--rl-u)*-1.4); line-height:1.2; text-align:center; margin:0 0 calc(var(--rl-u)*6); }
+.rl-nombre-movil,.rl-subtitulo-movil { position:absolute; width:1px; height:1px; padding:0; margin:-1px; clip-path:inset(50%); overflow:hidden; white-space:nowrap; }
+.rl-instruccion { color:var(--rl-ink); font-size:calc(var(--rl-u)*20); text-align:center; line-height:1.4; font-weight:500; margin:0; white-space:nowrap; }
+.rl-formulario { display:grid; gap:calc(var(--rl-u)*18); margin-top:calc(var(--rl-u)*31); }.rl-grupo { min-width:0; }.rl-grupo label { display:block; font-size:calc(var(--rl-u)*20); line-height:1.2; font-weight:700; margin-bottom:calc(var(--rl-u)*7); color:var(--rl-ink); }
+.rl-campo { display:flex; align-items:center; gap:calc(var(--rl-u)*22); padding:0 calc(var(--rl-u)*18); border:calc(var(--rl-u)*1.5) solid #b6c6e6; border-radius:calc(var(--rl-u)*17); min-height:calc(var(--rl-u)*60); color:var(--rl-ink); background:#ffffff40; }.rl-campo > svg { width:calc(var(--rl-u)*28); height:calc(var(--rl-u)*28); }
+.rl-campo:focus-within { outline:2px solid #095cc7; outline-offset:2px; border-color:#095cc7; }.rl-campo input { width:100%; min-width:0; outline:none; border:0; border-radius:0; padding:calc(var(--rl-u)*16) 0; color:var(--rl-ink); background:transparent; font-family:inherit; font-weight:500; font-size:calc(var(--rl-u)*20); line-height:1.3; }.rl-campo input::placeholder { color:#576889; opacity:1; }.reserva-login input:focus-visible { outline:none; }
+.reserva-login .rl-mostrar { display:grid; place-items:center; min-width:44px; min-height:44px; padding:0; margin-right:calc(var(--rl-u)*-3); border:0; background:transparent; color:var(--rl-ink); border-radius:5px; }.rl-mostrar:hover { background:#e4edff; }
+.rl-campo--error, .rl-campo--credenciales, .rl-campo--credenciales:focus-within { border:2px solid #a42b2b; }.rl-error-campo { color:#972020; font-size:14px; line-height:1.5; margin:6px 0 0; }.rl-error-servidor { color:#8c2020; background:#fff0f0; border:1px solid #c85858; padding:12px; border-radius:7px; margin:0; font-size:14px; line-height:1.5; }
+.reserva-login .rl-ingresar { display:flex; align-items:center; justify-content:center; gap:calc(var(--rl-u)*21); width:100%; min-height:calc(var(--rl-u)*67); padding:calc(var(--rl-u)*14); margin-top:calc(var(--rl-u)*8); background:linear-gradient(105deg,#0046cb,#004de0); border:0; border-radius:calc(var(--rl-u)*18); color:#fff; font-family:inherit; font-size:calc(var(--rl-u)*26); font-weight:700; }.rl-ingresar:hover { filter:brightness(.94); }.rl-ingresar svg { width:calc(var(--rl-u)*32); height:calc(var(--rl-u)*32); }.reserva-login button:disabled { opacity:.65; cursor:wait; }
+.reserva-login :is(a,button):focus-visible { outline:3px solid #ffcf57; outline-offset:4px; }.rl-panel :is(a,button):focus-visible { outline-color:#0656bd; }.rl-estado:empty { display:none; }.rl-estado { color:#425b79; text-align:center; font-size:14px; line-height:1.5; }
+.rl-ayuda { display:flex; align-items:center; justify-content:center; gap:calc(var(--rl-u)*16); border-top:calc(var(--rl-u)*1.4) solid #b9cae7; padding-top:calc(var(--rl-u)*22); margin:calc(var(--rl-u)*27) 0 0; font-size:calc(var(--rl-u)*18); line-height:1.5; font-weight:500; color:var(--rl-ink); white-space:nowrap; }.rl-ayuda svg { width:calc(var(--rl-u)*31); height:calc(var(--rl-u)*31); }
+.rl-enlaces { position:absolute; z-index:3; left:6.55%; bottom:7%; width:46.5%; padding:calc(var(--rl-u)*57) calc(var(--rl-u)*14) calc(var(--rl-u)*19); border:calc(var(--rl-u)*1.5) solid #98e5ff; border-radius:calc(var(--rl-u)*28); background:linear-gradient(110deg,#004481e0,#12376b99); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); box-shadow:inset 0 0 calc(var(--rl-u)*18) #91dfff75,0 calc(var(--rl-u)*5) calc(var(--rl-u)*18) #00264c66; color:#fff; }
+.rl-enlaces::before { content:''; position:absolute; top:calc(var(--rl-u)*35); left:calc(var(--rl-u)*235); right:calc(var(--rl-u)*26); height:1px; background:#b1e8ff8c; }
+.rl-enlaces-cabecera { position:absolute; top:calc(var(--rl-u)*12); left:calc(var(--rl-u)*24); display:flex; align-items:center; gap:calc(var(--rl-u)*7); padding:calc(var(--rl-u)*3) calc(var(--rl-u)*12); border:1px solid #58c8ff; border-radius:30px; background:#002d64; }.rl-enlaces-cabecera svg { width:calc(var(--rl-u)*20); height:calc(var(--rl-u)*20); }.rl-enlaces h2 { font-size:calc(var(--rl-u)*17); line-height:1.35; margin:0; font-weight:650; }
+.rl-tarjetas { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); }.rl-tarjeta { position:relative; display:grid; grid-template-columns:calc(var(--rl-u)*60) minmax(0,1fr); grid-template-rows:auto 1fr; gap:calc(var(--rl-u)*5) calc(var(--rl-u)*15); padding:0 calc(var(--rl-u)*15); min-width:0; min-height:calc(var(--rl-u)*76); color:#fff; text-decoration:none; border-left:1px solid #b7e6ff60; }.rl-tarjeta:first-child { border-left:0; }.rl-tarjeta:hover { background:#057fe333; border-radius:8px; }
+.rl-icono-enlace { display:grid; place-items:center; grid-column:1; grid-row:1/3; align-self:start; width:calc(var(--rl-u)*60); height:calc(var(--rl-u)*60); border-radius:calc(var(--rl-u)*16); background:linear-gradient(135deg,#d4f5ff,#a4d4f6); color:#0055e9; box-shadow:inset 0 0 10px #fff7; }.rl-icono-enlace svg { width:calc(var(--rl-u)*38); height:calc(var(--rl-u)*38); }
+.rl-tarjeta strong { grid-column:2; font-size:calc(var(--rl-u)*17); line-height:1.25; font-weight:700; white-space:nowrap; }.rl-descripcion { grid-column:2; font-size:calc(var(--rl-u)*14); line-height:1.25; padding-right:0; }.rl-flecha { position:absolute; right:calc(var(--rl-u)*10); bottom:calc(var(--rl-u)*-5); display:grid; place-items:center; width:calc(var(--rl-u)*24); height:calc(var(--rl-u)*24); border-radius:50%; background:#b7edff; color:#0566de; }.rl-flecha svg { width:calc(var(--rl-u)*17); height:calc(var(--rl-u)*17); }.rl-aviso-enlaces { position:absolute; width:1px; height:1px; margin:-1px; overflow:hidden; clip-path:inset(50%); }
+.reserva-login .rl-onda-inferior { position:absolute; z-index:0; bottom:0; left:0; width:100%; height:calc(var(--rl-u)*105); pointer-events:none; }
+.rl-spinner { width:19px; height:19px; border:2px solid #ffffff70; border-top-color:white; border-radius:50%; animation:rl-girar .8s linear infinite; }@keyframes rl-girar { to { transform:rotate(360deg); } }
+@media(max-width:1050px) { .reserva-login { --rl-u:.82px; }.rl-hero { min-height:100svh; padding:230px 24px 32px; overflow:visible; display:flex; flex-direction:column; align-items:center; gap:28px; }.rl-fotografia { background-size:auto 100%; background-position:25% center; }.rl-fotografia::after { background:#063b6870; }.reserva-login .rl-onda-superior { height:240px; width:100%; }.rl-cabecera-institucional { top:18px; left:24px; width:calc(100% - 48px); }.rl-institucion { height:48px; }.rl-presentacion { margin-top:8px; }.rl-producto { font-size:44px; }.rl-subtitulo-institucional { font-size:19px; }.rl-descripcion-institucional { font-size:15px; }.rl-salto-desktop { display:none; }.rl-acceso { position:relative; top:auto; right:auto; width:min(500px,100%); }.rl-panel { padding:28px; border-radius:24px; }.rl-panel .rl-marca { height:96px; }.rl-panel h1 { font-size:39px; }.rl-instruccion { font-size:17px; white-space:normal; }.rl-grupo label { font-size:17px; }.rl-campo { min-height:54px; }.rl-campo input { font-size:17px; }.reserva-login .rl-ingresar { min-height:56px; font-size:22px; }.rl-ayuda { font-size:15px; white-space:normal; }.rl-enlaces { position:relative; left:auto; bottom:auto; width:min(720px,100%); padding-top:48px; padding-bottom:22px; }.rl-enlaces h2 { font-size:15px; }.rl-tarjeta { min-height:82px; grid-template-columns:42px minmax(0,1fr); gap:5px 10px; padding:0 10px; }.rl-icono-enlace { width:42px; height:42px; border-radius:12px; }.rl-icono-enlace svg { width:29px; height:29px; }.rl-tarjeta strong { font-size:14px; white-space:normal; }.rl-descripcion { font-size:12px; }.reserva-login .rl-onda-inferior { height:50px; } }
+@media(max-width:540px) { .rl-hero { padding-top:225px; gap:24px; }.rl-producto { font-size:37px; }.rl-subtitulo-institucional { font-size:16px; }.rl-descripcion-institucional { font-size:14px; line-height:1.35; }.rl-universidad { font-size:11px; }.rl-institucion > strong { font-size:38px; }.rl-institucion { gap:10px; }.rl-panel { padding:24px 20px; border-radius:22px; }.rl-panel .rl-marca { height:78px; margin-bottom:15px; }.rl-panel h1 { font-size:34px; }.rl-instruccion { font-size:16px; }.rl-formulario { margin-top:24px; gap:17px; }.rl-grupo label { font-size:15px; }.rl-campo { gap:12px; padding:0 12px; border-radius:12px; }.rl-campo input { font-size:16px; }.rl-campo > svg { width:22px; height:22px; }.rl-ayuda { font-size:14px; padding-top:18px; gap:10px; }.rl-enlaces { padding-left:5px; padding-right:5px; padding-top:48px; border-radius:20px; }.rl-enlaces-cabecera { left:13px; }.rl-enlaces::before { left:205px; right:16px; top:28px; }.rl-tarjeta { display:flex; flex-direction:column; align-items:center; padding:0 8px 26px; gap:9px; min-height:180px; text-align:center; }.rl-icono-enlace { width:42px; height:42px; }.rl-tarjeta strong { font-size:13px; min-height:32px; }.rl-descripcion { font-size:12px; padding:0; }.rl-flecha { right:calc(50% - 10px); bottom:0; width:21px; height:21px; }.rl-flecha svg { width:16px; height:16px; } }
+@media(prefers-reduced-motion:reduce) { .reserva-login * { animation:none!important; transition:none!important; } }
+
+/* El emblema se muestra desde la fotografía ya integrada, sin alterar el archivo. */
+@media(min-width:1051px) {
+ .rl-cabecera-institucional { mix-blend-mode:screen; }
+ .rl-simbolo-institucion { mix-blend-mode:normal; clip-path:inset(0 8px 8px 0); }
+}
+@media(max-width:1050px) { .rl-cabecera-institucional { mix-blend-mode:screen; }.rl-simbolo-institucion { clip-path:inset(0 7px 7px 0); } }
+
+.rl-descripcion { font-family:Arial,sans-serif; }
+
+/* Compacidad de escritorio: tamaños reales ligados a ancho Y altura disponible.
+   Se conservan los anclajes; no se aplica zoom, transform:scale ni recorte. */
+@media(min-width:1051px) {
+ .reserva-login { --rl-fit:min(calc(100vw / 1671),calc(100svh / 941)); --rl-card-fit:min(calc(100vw / 1671),calc(100svh / 770)); --rl-u:var(--rl-fit); }
+ .rl-hero { min-height:100svh; }
+ .rl-fotografia { background-size:auto calc(100% - var(--rl-fit)*138); }
+ .reserva-login .rl-onda-superior { width:min(68%,calc(var(--rl-fit)*1136)); height:calc(var(--rl-fit)*292); }
+ .rl-cabecera-institucional { --rl-u:calc(var(--rl-fit)*.96); }
+ .rl-acceso { --rl-u:calc(var(--rl-card-fit)*.94); width:calc(var(--rl-card-fit)*570); max-width:36.3%; }
+ .rl-panel h1 { font-size:max(28px,calc(var(--rl-u)*48)); }
+ .rl-instruccion { font-size:max(14px,calc(var(--rl-u)*20)); white-space:normal; }
+ .rl-grupo label { font-size:max(14px,calc(var(--rl-u)*20)); }
+ .rl-campo { min-height:max(44px,calc(var(--rl-u)*60)); }
+ .rl-campo input { font-size:max(15px,calc(var(--rl-u)*20)); }
+ .reserva-login .rl-ingresar { min-height:max(44px,calc(var(--rl-u)*67)); font-size:max(18px,calc(var(--rl-u)*26)); }
+ .rl-ayuda { font-size:max(12px,calc(var(--rl-u)*18)); white-space:normal; }
+ .rl-universidad { font-size:max(10px,calc(var(--rl-u)*14)); }
+ .rl-descripcion-institucional { font-size:max(12px,calc(var(--rl-u)*18)); }
+ .rl-enlaces { --rl-u:calc(var(--rl-fit)*.97); width:45.1%; }
+ .rl-enlaces h2,.rl-tarjeta strong { font-size:max(13px,calc(var(--rl-u)*17)); }
+ .rl-descripcion { font-size:max(12px,calc(var(--rl-u)*14)); }
+}
+
+/* Los mensajes de validación también caben en escritorios de poca altura. */
+@media(min-width:1051px) and (max-height:700px) {
+ .rl-acceso:has(.rl-error-campo,.rl-error-servidor) .rl-panel { padding-top:14px; padding-bottom:14px; }
+ .rl-acceso:has(.rl-error-campo,.rl-error-servidor) .rl-marca { height:44px; margin-bottom:6px; }
+ .rl-acceso:has(.rl-error-campo,.rl-error-servidor) .rl-formulario { margin-top:12px; gap:10px; }
+ .rl-acceso:has(.rl-error-campo,.rl-error-servidor) .rl-ayuda { margin-top:12px; padding-top:10px; }
+}
+
+
+/* Retroalimentación de acceso en la capa modal nativa. */
+.reserva-login .rl-ingresar:disabled {
+  opacity: 1;
+  filter: none;
+}
+
+.reserva-login .rl-validacion {
+  width: min(360px, calc(100% - 32px));
+  max-height: calc(100dvh - 32px);
+  margin: auto;
+  padding: 26px 22px;
+  border: 1px solid #dbe5f4;
+  border-radius: 18px;
+  background: #fff;
+  color: var(--rl-ink);
+  box-shadow: 0 16px 42px #00144830;
+  text-align: center;
+  font-family: Inter, Arial, sans-serif;
+}
+
+.reserva-login .rl-validacion::backdrop {
+  background: #061b4159;
+}
+
+.rl-validacion-resultado h2 {
+  margin: 0;
+  font: 600 20px/1.35 Poppins, Inter, sans-serif;
+}
+
+.rl-validacion-resultado p {
+  margin: 8px 0 0;
+  color: #425b79;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.rl-validacion-icono {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  background: #eaf2ff;
+  color: #0755ce;
+}
+
+.rl-validacion-icono[data-estado="exito"] { background: #e7f5ec; color: #176448; }
+.rl-validacion-icono[data-estado="incorrecto"] { background: #fbecef; color: #a7273d; }
+.rl-validacion-icono[data-estado="tecnico"] { background: #fff3d5; color: #76521b; }
+
+.reserva-login .rl-validacion-icono svg {
+  width: 26px;
+  height: 26px;
+}
+
+.rl-validacion-icono .rl-spinner {
+  width: 25px;
+  height: 25px;
+  border: 3px solid #b8d1f4;
+  border-top-color: currentColor;
+}

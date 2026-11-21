@@ -1,0 +1,13 @@
+.app .inventario-admin .tabla { overflow-x: auto; scrollbar-color: var(--ui-control-border) var(--ui-raised); }
+.app .inventario-admin table { min-width: 760px; }
+.app .inventario-admin td { padding-block: 17px; }
+.app .inventario-admin :is(th, td):last-child { width: 1%; }
+.app .inventario-admin td:last-child .acciones { width: max-content; }
+.app .inventario-admin .usuarios-paginacion .acciones { margin: 0; }
+
+@media (min-width: 1101px) {
+  .app .content:has(.inventario-admin) { max-width: 1680px; }
+  .app .panel:has(> .inventario-admin) h2 { font-size: calc(1.25rem * var(--ui-text-scale, 1)); }
+  .app .inventario-admin :is(th, td) { font-size: calc(.9rem * var(--ui-text-scale, 1)); }
+  .app .panel:has(> .inventario-admin) .filters .busqueda { flex: 1 1 20rem; max-width: 32rem; }
+}

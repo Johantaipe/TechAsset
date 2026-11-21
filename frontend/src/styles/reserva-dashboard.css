@@ -1,0 +1,461 @@
+.app .content.content--dashboard {
+  padding: 18px clamp(16px, 2.3vw, 32px) 8px;
+}
+
+.app .content--dashboard .footer {
+  margin-top: 12px;
+  padding: 7px 0 0;
+}
+
+.dash-panel {
+  display: grid;
+  gap: 14px;
+}
+
+.app .dash-panel .dash-welcome {
+  margin: 0;
+  padding: 16px 20px;
+  gap: 16px;
+  align-items: center;
+}
+
+.app .dash-welcome h2 {
+  margin: 3px 0;
+  font-size: calc(clamp(1.25rem, 1.8vw, 1.625rem) * var(--ui-text-scale, 1));
+}
+
+.app .dash-welcome p {
+  font-size: calc(0.8125rem * var(--ui-text-scale, 1));
+  line-height: 1.5;
+}
+
+.dash-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.app .dash-actions button {
+  padding-inline: 12px;
+}
+
+.dash-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.dash-toolbar h2,
+.dash-card h3 {
+  margin: 0;
+}
+
+.dash-muted,
+.dash-list small,
+.dash-featured small {
+  color: var(--ui-muted);
+  font-size: calc(0.8125rem * var(--ui-text-scale, 1));
+  line-height: 1.4;
+}
+
+.dash-muted {
+  margin: 2px 0 0;
+}
+
+.app .dash-panel .stats {
+  margin: 0;
+  gap: 12px;
+}
+
+.app .dash-panel .stats .stat-card {
+  min-width: 0;
+  gap: 3px;
+  padding: 10px 14px;
+}
+
+.app .dash-panel .stats .stat-card strong {
+  font-size: calc(1.875rem * var(--ui-text-scale, 1));
+}
+
+.app .dash-panel .metric-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.app .dash-panel .metric-icon svg {
+  width: 19px;
+  height: 19px;
+}
+
+.dash-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.dash-grid--activity {
+  grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr);
+}
+
+.dash-grid--summary {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.dash-duration {
+  display: block;
+  margin-top: 5px;
+  font: 600 calc(1.5rem * var(--ui-text-scale, 1))/1.3 Poppins, Inter, sans-serif;
+  color: var(--ui-accent-text);
+}
+
+.dash-distribution .dash-legend {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px 12px;
+}
+
+.dash-card {
+  min-width: 0;
+  padding: 13px 14px;
+  border: 1px solid var(--ui-border);
+  border-radius: var(--ui-radius);
+  background: var(--ui-surface);
+  box-shadow: var(--ui-shadow);
+  overflow-wrap: anywhere;
+}
+
+.app .dash-card h3 {
+  font-size: calc(1rem * var(--ui-text-scale, 1));
+}
+
+.dash-list {
+  margin: 6px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dash-list li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px 8px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--ui-row-border);
+}
+
+.dash-list li:last-child {
+  border-bottom: 0;
+}
+
+.dash-list li > div {
+  flex: 1 1 120px;
+  min-width: 0;
+}
+
+.dash-list strong,
+.dash-list small {
+  display: block;
+}
+
+.app .dash-list .badge {
+  padding: 3px 8px;
+}
+
+.app .dash-card .dash-link {
+  margin-top: 3px;
+  padding: 5px 8px;
+  border-color: transparent;
+  background: transparent;
+  color: var(--ui-accent-text);
+}
+
+.app .dash-card .dash-link:hover {
+  background: var(--ui-soft);
+}
+
+.dash-chart {
+  display: flex;
+  gap: 2px;
+  height: 13px;
+  margin: 10px 0 8px;
+}
+
+.dash-chart span {
+  flex-basis: 0;
+  min-width: 0;
+  border-radius: 3px;
+}
+
+.dash-segment.Pendiente { background: var(--ui-pending); }
+.dash-segment.Aprobada { background: var(--ui-approved-ink); }
+.dash-segment.Rechazada { background: var(--ui-rejected-ink); }
+.dash-segment.Cancelada { background: var(--ui-canceled-ink); }
+
+.dash-legend,
+.dash-counts {
+  margin: 6px 0 0;
+}
+
+.dash-legend > div,
+.dash-counts > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 2px 0;
+}
+
+.dash-card dt,
+.dash-card dd {
+  margin: 0;
+}
+
+.dash-card dt {
+  font-size: calc(0.8125rem * var(--ui-text-scale, 1));
+  font-weight: 500;
+}
+
+.dash-card dd {
+  font-weight: 700;
+  text-align: end;
+}
+
+.dash-legend i {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-inline-end: 7px;
+  border-radius: 2px;
+}
+
+.dash-featured {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: 10px;
+  background: var(--ui-featured-bg);
+  border-color: var(--ui-featured-border);
+}
+
+.app .dash-featured .featured-environment-icon {
+  inline-size: 38px;
+}
+
+.app .dash-featured .featured-environment-icon svg {
+  width: 21px;
+  height: 21px;
+}
+
+.dash-featured strong,
+.dash-featured small {
+  display: block;
+}
+
+.dash-featured strong {
+  margin: 3px 0;
+  font-family: Poppins, Inter, sans-serif;
+  line-height: 1.4;
+}
+
+@media (max-width: 1050px) {
+  .dash-grid--activity {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dash-grid--summary {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .app .dash-panel .dash-welcome {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .dash-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 450px) {
+  .app .dash-panel .metric-heading {
+    align-items: center;
+    flex-direction: row;
+    gap: 6px;
+  }
+
+  .app .dash-panel .metric-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .app .dash-panel .metric-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.dash-card-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 8px;
+}
+
+.dash-card-heading > div {
+  min-width: 0;
+}
+
+.app .dash-card-heading .dash-link {
+  margin-top: 0;
+}
+
+@media (min-width: 1051px) {
+  .app .main:has(> .content--dashboard) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .app .content.content--dashboard {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    width: 100%;
+    margin-block: 0;
+    padding-block: clamp(12px, 1.8vh, 22px) 8px;
+  }
+
+  .dash-panel {
+    flex: 1 0 auto;
+    grid-template-rows: max-content max-content auto auto;
+    gap: clamp(10px, 1.65vh, 18px);
+  }
+
+  .app .dash-panel .dash-welcome {
+    padding-block: clamp(10px, 1.85vh, 20px);
+  }
+
+  .dash-activity {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dash-activity .dash-list {
+    display: grid;
+    flex: 1;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 125px), 1fr));
+    gap: 8px;
+  }
+
+  .dash-activity .dash-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 6px;
+    padding: 9px;
+    border: 1px solid var(--ui-border);
+    border-radius: 10px;
+    background: var(--ui-editor);
+  }
+
+  .dash-activity .dash-list li > div {
+    flex: 0 0 auto;
+  }
+
+  .dash-distribution {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .dash-grid--summary .dash-card:not(.dash-assigned) {
+    align-content: center;
+  }
+
+  .dash-featured {
+    align-items: center;
+  }
+
+  .dash-counts > div {
+    padding-block: 5px;
+  }
+}
+
+@media (min-width: 1051px) and (max-height: 800px) {
+  .app .content.content--dashboard {
+    padding-block: 12px 4px;
+  }
+
+  .app .content--dashboard .footer {
+    margin-top: 8px;
+  }
+
+  .app .dash-panel .stats .stat-card {
+    position: relative;
+    padding-block: 8px;
+  }
+
+  .app .dash-panel .metric-heading {
+    padding-inline-end: 30px;
+  }
+
+  .app .dash-panel .metric-icon {
+    position: absolute;
+    inset-block-start: 9px;
+    inset-inline-end: 10px;
+    width: 26px;
+    height: 26px;
+  }
+}
+
+
+@media (min-width: 1051px) and (max-height: 720px) {
+  .app .dash-panel .dash-welcome {
+    padding-block: 8px;
+  }
+
+  .app .dash-panel .stats .stat-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .app .dash-panel .metric-heading {
+    padding-inline-end: 0;
+    justify-content: flex-start;
+  }
+
+  .app .dash-panel .metric-icon {
+    position: static;
+    order: -1;
+  }
+
+  .dash-activity .dash-list li {
+    gap: 4px;
+    padding: 6px 8px;
+  }
+
+  .dash-card {
+    padding-block: 10px;
+  }
+}
+
+@media (min-width: 1051px) and (max-height: 680px) {
+  .app .content.content--dashboard {
+    padding-block: 10px 0;
+  }
+
+  .dash-panel {
+    gap: 8px;
+  }
+
+  .app .content--dashboard .footer {
+    margin-top: 5px;
+    padding-top: 3px;
+  }
+}

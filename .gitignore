@@ -1,0 +1,38 @@
+**/bin/
+**/obj/
+.local/
+frontend/node_modules/
+frontend/dist/
+.env
+.env.local
+
+# Dependencias, compilaciones y configuración local
+**/node_modules/
+**/dist/
+.vs/
+.env.*
+!.env.example
+**/secrets.json
+**/appsettings.Local.json
+**/appsettings.*.local.json
+*.user
+*.suo
+
+# Archivos privados y copias de trabajo
+**/respaldos/
+**/backups/
+**/tmp/
+*.tmp
+*.bak
+*.dump
+*.backup
+*.sql.gz
+*.log
+*.pfx
+*.p12
+*.key
+*.pem
+/* integrador.pdf
+
+# Recurso antiguo que no se utiliza en TechAsset
+/frontend/src/assets/foto-acceso.png

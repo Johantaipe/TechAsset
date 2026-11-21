@@ -1,0 +1,38 @@
+.dash-tecnologia-detalles {
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+  align-items: start;
+  gap: 16px;
+}
+.dash-tecnologia-grafico { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.dash-tecnologia-grafico li > div { display: flex; justify-content: space-between; gap: 12px; overflow-wrap: anywhere; }
+.dash-tecnologia-grafico meter { width: 100%; height: 14px; }
+.dash-tecnologia-grafico meter::-webkit-meter-bar { background: var(--ui-soft); border: 0; }
+.dash-tecnologia-grafico meter::-webkit-meter-optimum-value { background: var(--ui-primary); }
+.dash-tecnologia-grafico meter::-moz-meter-bar { background: var(--ui-primary); }
+.dash-tecnologia .dash-tecnologia-enlace {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  color: var(--ui-accent-text);
+}
+.dash-tecnologia-accesos { display: flex; flex-wrap: wrap; gap: 10px; }
+.dash-tecnologia-accesos a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 8px 14px;
+  border: 1px solid var(--ui-control-border);
+  border-radius: 9px;
+  color: var(--ui-ink);
+  background: var(--ui-secondary-bg);
+  font-weight: 650;
+  text-decoration: none;
+}
+.dash-tecnologia-accesos a:not(.button-primary):hover { background: var(--ui-secondary-hover); }
+.dash-tecnologia-accesos svg, .dash-tecnologia-enlace svg { flex: none; }
+@media (max-width: 1100px) {
+  .dash-tecnologia-detalles { grid-template-columns: minmax(0, 1fr); }
+}

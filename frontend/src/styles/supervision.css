@@ -1,0 +1,14 @@
+.app .fila-consulta { cursor: pointer; }
+.app td .fila-consulta-detalle {
+  color: var(--ui-accent-text);
+  background: transparent;
+  border-color: transparent;
+  text-align: start;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+.detalle-supervision dd { overflow-wrap: anywhere; }
+.workspace-dialog:has(.detalle-supervision) { max-height: calc(100dvh - 32px); overflow: auto; }
+@media (max-width: 540px) {
+  .workspace-dialog .detalle-supervision dl { grid-template-columns: minmax(0, 1fr); }
+}

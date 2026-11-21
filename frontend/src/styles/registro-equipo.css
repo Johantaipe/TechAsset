@@ -1,0 +1,10 @@
+.workspace-dialog:has(.registro-equipo-cerrar) { position: fixed; }
+.workspace-dialog:has(.registro-equipo-cerrar) > h2 { padding-inline-end: 52px; }
+.workspace-dialog .registro-equipo-cerrar {
+  position: absolute;
+  inset-block-start: 14px;
+  inset-inline-end: 14px;
+  min-width: 44px;
+  padding-inline: 8px;
+  font-size: 1.25rem;
+}

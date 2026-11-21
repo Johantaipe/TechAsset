@@ -1,0 +1,170 @@
+.app :is(.indicadores-dashboard, .indicadores-actividad) .indicador-tono-total { --metric-color: #34516e; --metric-bg: #eaf0f5; --metric-icon-bg: #dce7f1; }
+.app .indicador-tono-disponible { --metric-color: #174989; --metric-bg: #e8f1ff; --metric-icon-bg: #d8e8ff; }
+.app .indicador-tono-activo { --metric-color: #5c3988; --metric-bg: #efe8f8; --metric-icon-bg: #e4d8f2; }
+.app .indicador-tono-mantenimiento { --metric-color: #754617; --metric-bg: #faecdb; --metric-icon-bg: #f3dfc5; }
+.app .indicador-tono-baja { --metric-color: #932c42; --metric-bg: #f8e9ed; --metric-icon-bg: #f5dce3; }
+.app .indicador-tono-pendiente { --metric-color: #705417; --metric-bg: #fbf3d6; --metric-icon-bg: #f2e5b1; }
+.app .indicador-tono-finalizado { --metric-color: #246248; --metric-bg: #e7f4eb; --metric-icon-bg: #d5ebdf; }
+.app .indicador-tono-prestamos { --metric-color: #155d67; --metric-bg: #e5f3f4; --metric-icon-bg: #d1e9ed; }
+.app .indicador-tono-area { --metric-color: #51418e; --metric-bg: #eeebf9; --metric-icon-bg: #e3dcf7; }
+
+.app[data-tema="oscuro"] :is(.indicadores-dashboard, .indicadores-actividad) .indicador-tono-total { --metric-color: #c4d8eb; --metric-bg: #25374a; --metric-icon-bg: #354c64; }
+.app[data-tema="oscuro"] .indicador-tono-disponible { --metric-color: #b9d8ff; --metric-bg: #223955; --metric-icon-bg: #2f4d72; }
+.app[data-tema="oscuro"] .indicador-tono-activo { --metric-color: #e0c7ff; --metric-bg: #362949; --metric-icon-bg: #4b3964; }
+.app[data-tema="oscuro"] .indicador-tono-mantenimiento { --metric-color: #ffd1a1; --metric-bg: #443325; --metric-icon-bg: #594335; }
+.app[data-tema="oscuro"] .indicador-tono-baja { --metric-color: #f3b5c2; --metric-bg: #402b33; --metric-icon-bg: #523640; }
+.app[data-tema="oscuro"] .indicador-tono-pendiente { --metric-color: #f6dda0; --metric-bg: #403821; --metric-icon-bg: #584a2c; }
+.app[data-tema="oscuro"] .indicador-tono-finalizado { --metric-color: #b8e4cb; --metric-bg: #263c33; --metric-icon-bg: #335245; }
+.app[data-tema="oscuro"] .indicador-tono-prestamos { --metric-color: #afe0e4; --metric-bg: #243b42; --metric-icon-bg: #31505a; }
+.app[data-tema="oscuro"] .indicador-tono-area { --metric-color: #d5ceff; --metric-bg: #302d4d; --metric-icon-bg: #414066; }
+
+.app .dash-panel .indicadores-dashboard { gap: clamp(10px, 1.2vw, 16px); }
+.app .dash-panel .indicadores-dashboard .stat-card {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  min-block-size: clamp(125px, 14dvh, 155px);
+  padding: 14px 16px;
+}
+.app .indicadores-dashboard .metric-heading { padding: 0; align-items: flex-start; }
+.app .indicadores-dashboard .metric-icon { position: static; order: 0; width: 38px; height: 38px; }
+.app .indicadores-dashboard .stat-card strong { font-size: calc(clamp(1.85rem, 2.7vw, 2.6rem) * var(--ui-text-scale, 1)); }
+.app .indicadores-dashboard .indicador-texto strong { font-size: calc(clamp(1.4rem, 2.1vw, 2rem) * var(--ui-text-scale, 1)); }
+
+.indicadores-actividad {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));
+  gap: 8px;
+  margin: 7px 0 0;
+}
+.indicadores-actividad > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 6px 10px;
+  border: 1px solid var(--ui-border);
+  border-radius: 9px;
+  background: var(--metric-bg);
+}
+.indicadores-actividad dt { font-size: .84em; }
+.app .indicadores-actividad .metric-icon { width: 26px; height: 26px; }
+.app .indicadores-actividad .metric-icon svg { width: 15px; height: 15px; }
+.app .indicadores-actividad dd { margin: 0; font-size: 1.25em; color: var(--metric-color); }
+
+.app .dashboard-admin .dash-list li { padding-block: 7px; }
+.app .dashboard-admin .dashboard-admin-movimientos li { padding: 0; }
+.app .dashboard-admin-movimientos button { min-height: 42px; }
+.app .dash-tecnologia > section > h2 { margin: 0 0 10px; }
+.app .dash-tecnologia .dash-tecnologia-detalles > .panel { margin-block-end: 0; }
+.app .dash-tecnologia > .panel, .app .dashboard-colaborador > .panel { margin-block-end: 0; }
+.app .dash-tecnologia .tabla:not(:focus-within) { overscroll-behavior-inline: contain; }
+@media (min-width: 1051px) and (max-height: 800px) {
+  .app .dash-panel .indicadores-dashboard .stat-card { min-block-size: 106px; padding-block: 10px; }
+  .app .dashboard-admin .dash-list li { padding-block: 5px; }
+  .app .dashboard-admin .dashboard-admin-movimientos li { padding: 0; }
+}
+@media (max-width: 700px) {
+  .app .dash-panel .indicadores-dashboard .stat-card { min-block-size: 112px; }
+}
+
+.dashboard-colaborador-detalles { display: grid; gap: 14px; }
+.app :is(.dash-tecnologia, .dashboard-colaborador) .panel { padding: clamp(13px, 1.3vw, 20px); margin-block-end: 0; }
+.app :is(.dash-tecnologia, .dashboard-colaborador) .panel h2 { margin-block-end: 9px; }
+.app :is(.dash-tecnologia, .dashboard-colaborador) .panel .tabla { margin-block-start: 10px; }
+.app :is(.dash-tecnologia, .dashboard-colaborador) .panel :is(th, td) { padding: 9px 12px; }
+.app .content:has(> :is(.dash-tecnologia, .dashboard-colaborador)) { padding-block: 14px; }
+@media (min-width: 1250px) {
+  .app .dash-tecnologia .dash-tecnologia-detalles,
+  .dashboard-colaborador-detalles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .app .dash-tecnologia-grafico { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 12px; }
+  .app .dash-tecnologia-grafico li { font-size: .84em; }
+  .app .dash-tecnologia-grafico meter { height: 10px; }
+  .app .dashboard-colaborador-detalles table { min-width: 0; }
+}
+@media (min-width: 1250px) {
+  .app .dash-tecnologia .dash-tecnologia-detalles {
+    grid-template-columns: minmax(0, 1fr) minmax(0, .9fr) minmax(0, 1.2fr);
+    gap: 10px;
+  }
+  .app .dash-tecnologia-detalles table { min-width: 0; }
+  .app .dash-tecnologia-detalles :is(th, td) { padding-inline: 7px; }
+  .app .dash-tecnologia-detalles th { white-space: normal; }
+  .app .dash-tecnologia .dash-tecnologia-accesos { gap: 8px; }
+  .app .dash-tecnologia .dash-tecnologia-accesos a { min-height: 38px; padding: 5px 9px; font-size: .88em; }
+  .app .dash-tecnologia-grafico strong { white-space: nowrap; }
+  .app .dash-panel.dash-tecnologia { gap: 10px; }
+  .app .dash-panel.dash-tecnologia .dash-welcome { padding-block: 10px; }
+}
+
+@media (min-width: 1250px) {
+  .app .dash-panel.dash-tecnologia .indicadores-dashboard .stat-card {
+    min-block-size: 100px;
+    padding-block: 10px;
+  }
+  .app .dash-tecnologia > .panel:has(.dash-tecnologia-accesos) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 16px;
+    padding-block: 11px;
+  }
+  .app .dash-tecnologia > .panel:has(.dash-tecnologia-accesos) h2 { margin: 0; }
+  .app .dash-tecnologia-detalles tbody td:last-child { white-space: nowrap; }
+}
+.app .dash-tecnologia-marca {
+  display: block;
+  color: var(--ui-muted);
+  font-weight: 400;
+}
+@media (min-width: 1250px) {
+  .app .dash-panel.dash-tecnologia .indicadores-dashboard {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+  .app .dash-tecnologia .dash-tecnologia-detalles > .panel { padding: 12px; }
+  .app .dash-tecnologia .dash-tecnologia-detalles :is(th, td) { padding: 6px 8px; }
+}
+
+@media (min-width: 1250px) and (max-height: 800px) {
+  .app .content:has(> .dash-tecnologia) { padding-block: 8px; }
+  .app .dash-tecnologia .dash-tecnologia-detalles .panel h2 { margin-block-end: 4px; }
+  .app .dash-tecnologia .dash-tecnologia-detalles .panel .tabla { margin-block-start: 5px; }
+}
+.app .content .dash-tecnologia > .panel:has(.dash-tecnologia-accesos) { margin-block-end: 0; }
+
+@media (min-width: 1500px) and (min-height: 900px) {
+  .app .content:has(> .dash-tecnologia) { padding-block: 8px; }
+  .app .dash-panel.dash-tecnologia .indicadores-dashboard .stat-card {
+    min-block-size: clamp(100px, calc(100dvh - 810px), 215px);
+  }
+  .app .dash-tecnologia > .panel .dash-tecnologia-accesos { flex: 1; }
+  .app .dash-tecnologia-accesos a { flex: 1 1 auto; justify-content: center; }
+  .app .dash-tecnologia .dash-tecnologia-detalles {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+    align-items: stretch;
+  }
+  .app .dash-tecnologia .dash-tecnologia-detalles > .panel { padding: 14px 16px; }
+  .app .dash-tecnologia-detalles > .panel:has(.dash-tecnologia-grafico) {
+    grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+  }
+  .app .dash-tecnologia-grafico {
+    flex: 1;
+    grid-template-columns: 1fr;
+    align-content: space-between;
+    gap: 8px;
+  }
+  .app .dash-tecnologia-grafico li { font-size: 1em; }
+  .app .dash-tecnologia-grafico meter { height: 16px; }
+  .app .dash-tecnologia .dash-tecnologia-detalles .panel .tabla { margin-block-start: 6px; }
+  .app .dash-tecnologia-detalles .dash-tecnologia-enlace { min-height: 32px; }
+}
+
+@media (min-width: 1700px) and (min-height: 900px) {
+  .app .dash-tecnologia .dash-tecnologia-detalles :is(th, td) {
+    padding-block: calc(6px + clamp(1px, (100dvh - 900px) / 18, 7px));
+  }
+}

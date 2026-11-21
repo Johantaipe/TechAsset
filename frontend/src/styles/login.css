@@ -1,0 +1,291 @@
+.login-tech {
+  --login-scale: var(--ui-text-scale, 1);
+  --login-panel: #f2f5f9;
+  --login-card: #fff;
+  --login-field: #f4f6f9;
+  --login-border: #bbc9d9;
+  --login-ink: #152b44;
+  --login-muted: #4b627c;
+  --login-accent: #096b9d;
+  display: grid;
+  grid-template-columns: minmax(0, 63.5fr) minmax(0, 36.5fr);
+  min-height: 100svh;
+  color: var(--login-ink);
+  background: var(--login-panel);
+}
+
+.tech-acceso[data-tema="oscuro"] .login-tech {
+  --login-panel: var(--ui-bg);
+  --login-card: var(--ui-surface);
+  --login-field: var(--ui-field);
+  --login-border: var(--ui-control-border);
+  --login-ink: var(--ui-ink);
+  --login-muted: var(--ui-muted);
+  --login-accent: var(--ui-accent-text);
+}
+
+.login-tech__presentacion {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  padding: 42px clamp(24px, 4.4vw, 84px);
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  background: #071426 url("../assets/login-oficina.png") 55% center / cover no-repeat;
+}
+
+.app .login-tech__presentacion:focus-visible {
+  outline-color: #ffda75;
+  outline-offset: -5px;
+  box-shadow: none;
+}
+
+.login-tech__identidad {
+  width: min(100%, calc(315px * var(--login-scale)));
+  overflow-wrap: anywhere;
+}
+
+.login-tech__identidad p { margin: 0; }
+
+.login-tech__identidad .login-tech__empresa {
+  color: #dce8f6;
+  font-size: calc(.93rem * var(--login-scale));
+  line-height: 1.35;
+  font-weight: 750;
+  letter-spacing: .135em;
+  margin-bottom: 10px;
+}
+
+.login-tech__bienvenida { font-size: calc(1.6rem * var(--login-scale)); }
+
+.login-tech__producto {
+  font-family: Poppins, Inter, Arial, sans-serif;
+  font-size: calc(clamp(2.1rem, 2.65vw, 3rem) * var(--login-scale));
+  line-height: 1.14;
+  font-weight: 750;
+  letter-spacing: -.025em;
+}
+
+.login-tech__identidad .login-tech__descripcion {
+  color: #dce8f6;
+  font-size: calc(.98rem * var(--login-scale));
+  line-height: 1.5;
+  margin-top: 14px;
+}
+
+.login-tech__lado-formulario {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  padding: 72px 22px;
+}
+
+.tech-acceso .login-tech__controles {
+  position: absolute;
+  inset: 15px 16px auto auto;
+  z-index: 1;
+}
+
+.login-tech__tarjeta {
+  width: min(100%, 420px);
+  min-height: min(630px, calc(100svh - 144px));
+  padding: clamp(30px, 5.7vh, 53px) clamp(20px, 2.15vw, 36px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: var(--login-card);
+  border: 1px solid var(--ui-border);
+  border-radius: 15px;
+  box-shadow: 0 21px 49px #142b4a26;
+}
+
+.login-tech__marca {
+  display: grid;
+  align-self: center;
+  justify-items: center;
+  gap: 5px;
+  margin-bottom: 24px;
+  border-radius: 9px;
+  text-decoration: none;
+}
+
+.login-tech__marca:hover strong { text-decoration: underline; text-underline-offset: 3px; }
+
+.login-tech__marca span {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  color: #fff;
+  background: #0876ad;
+  border-radius: 16px;
+}
+
+.login-tech__marca svg { width: 30px; height: 30px; }
+
+.login-tech__marca strong {
+  color: var(--login-accent);
+  font-size: calc(.93rem * var(--login-scale));
+  letter-spacing: .025em;
+}
+
+.app .login-tech__tarjeta h1 {
+  margin: 0;
+  color: var(--login-ink);
+  font-size: calc(1.5rem * var(--login-scale));
+  line-height: 1.26;
+  text-align: center;
+}
+
+.login-tech__subtitulo, .login-tech__estado {
+  margin: 5px 0 0;
+  color: var(--login-muted);
+  font-size: calc(.93rem * var(--login-scale));
+  text-align: center;
+}
+
+.login-tech__formulario { display: grid; gap: 23px; margin-top: 24px; }
+.login-tech__grupo { min-width: 0; }
+
+.login-tech__grupo label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: calc(.87rem * var(--login-scale));
+  font-weight: 650;
+}
+
+.login-tech__campo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 48px;
+  min-width: 0;
+  padding-inline-start: 12px;
+  color: var(--login-muted);
+  background: var(--login-field);
+  border: 1px solid var(--login-border);
+  border-radius: 9px;
+}
+
+.login-tech__campo > svg { width: 17px; height: 17px; flex: 0 0 auto; }
+
+.login-tech__campo:focus-within {
+  outline: 2px solid var(--ui-focus);
+  outline-offset: 2px;
+}
+
+.login-tech__campo:has(input[aria-invalid="true"]) { border-color: var(--ui-error-ink); }
+
+.login-tech__campo input {
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+  min-height: 46px;
+  padding: 9px 4px 9px 0;
+  color: var(--login-ink);
+  background: transparent;
+  border: 0;
+  font-size: calc(.93rem * var(--login-scale));
+}
+
+.login-tech__campo input::placeholder { color: var(--login-muted); opacity: 1; }
+.app .login-tech__campo input:focus-visible { outline: none; box-shadow: none; }
+
+.app .login-tech__campo .login-tech__mostrar {
+  display: grid;
+  place-items: center;
+  flex: 0 0 44px;
+  min-height: 44px;
+  padding: 0;
+  color: var(--login-muted);
+  background: transparent;
+  border: 0;
+}
+
+.login-tech__mostrar svg { width: 19px; height: 19px; }
+
+.app .login-tech .login-tech__ingresar {
+  width: 100%;
+  min-height: 46px;
+  margin: 22px 0 0;
+  color: #fff;
+  background: linear-gradient(105deg, #1274ad, #216092);
+  border: 1px solid transparent;
+  border-radius: 9px;
+  box-shadow: 0 8px 20px #1477ad33;
+  font-size: calc(.94rem * var(--login-scale));
+  font-weight: 750;
+}
+
+.app .login-tech .login-tech__ingresar:hover:not(:disabled) {
+  background: linear-gradient(105deg, #10689c, #1a527f);
+}
+
+.app .login-tech .login-tech__ingresar:disabled {
+  color: var(--ui-disabled-ink);
+  background: var(--ui-disabled-bg);
+  border-color: var(--ui-disabled-border);
+  box-shadow: none;
+}
+
+.login-tech__volver {
+  display: inline-flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 44px;
+  margin-top: 10px;
+  padding-inline: 7px;
+  color: var(--login-accent);
+  border-radius: 6px;
+  text-align: center;
+  font-size: calc(.86rem * var(--login-scale));
+  text-underline-offset: 3px;
+}
+
+.login-tech__volver .nav-icon { width: 16px; height: 16px; flex: 0 0 16px; transform: rotate(180deg); }
+
+.login-tech__ayuda {
+  margin: 5px 0 0;
+  color: var(--login-muted);
+  font-size: calc(.8rem * var(--login-scale));
+  overflow-wrap: anywhere;
+}
+
+.login-tech__ayuda a { color: inherit; }
+
+.login-tech__error { margin: 6px 0 0; color: var(--ui-error-ink); font-size: calc(.85rem * var(--login-scale)); }
+.login-tech__error--servidor { padding: 10px; border-radius: 8px; background: var(--ui-error-bg); margin-top: 15px; }
+.app .login-tech__dialogo { color: var(--login-ink); text-align: center; max-height: calc(100dvh - 24px); overflow: auto; }
+.login-tech__dialogo h2 { margin: 12px 0 0; }
+.login-tech__resultado-icono { margin: auto; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; background: var(--ui-soft); color: var(--ui-accent-text); }
+.login-tech__resultado-icono svg { width: 24px; height: 24px; }
+.login-tech__resultado-icono[data-estado="exito"] { color: var(--ui-success-ink); background: var(--ui-success-bg); }
+.login-tech__resultado-icono[data-estado="incorrecto"], .login-tech__resultado-icono[data-estado="tecnico"] { color: var(--ui-error-ink); background: var(--ui-error-bg); }
+.login-tech__resultado-icono .rl-spinner { border-color: var(--login-border); border-top-color: currentColor; }
+
+@media (max-width: 900px) {
+  .login-tech { grid-template-columns: minmax(0, 1fr); }
+  .login-tech__presentacion { min-height: 270px; padding-block: 25px; background-position: 62% center; }
+  .login-tech__lado-formulario { padding-block: 70px 28px; }
+  .login-tech__tarjeta { min-height: 0; padding-block: 28px; }
+  .app .login-tech .login-tech__ingresar { margin-top: 5px; }
+}
+
+@media (max-width: 470px) {
+  .login-tech__presentacion {
+    min-height: 195px;
+    padding: 18px 16px;
+    background-image: linear-gradient(90deg, #071426ed 15%, #07142682 100%), url("../assets/login-oficina.png");
+  }
+  .login-tech__identidad { max-width: 30ch; }
+  .login-tech__lado-formulario { padding-inline: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .login-tech__resultado-icono .rl-spinner { animation: none; }
+}
+
